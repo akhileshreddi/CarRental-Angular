@@ -19,7 +19,7 @@
                         <span class="user-name" onclick="toggleDropdown()">{{logged_user.name}}
                             <div class="dropdown-content">
                                 <a href="#">My Profile</a>
-                                <a [routerLink]="['/','Login']">Logout</a>
+                                <a (click)="Logout()">Logout</a>
                             </div>
                         </span>
                     </li>

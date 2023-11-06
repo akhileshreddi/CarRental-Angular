@@ -30,6 +30,7 @@ import { MatCardModule } from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatIconModule} from '@angular/material/icon';
 import { BookingPageComponent } from './components/booking-page/booking-page.component';
+import { UserNotFoundComponent } from './components/user-not-found/user-not-found.component';
 
 
 
@@ -46,6 +47,7 @@ import { BookingPageComponent } from './components/booking-page/booking-page.com
     LandingPageComponent,
     CarsPageComponent,
     BookingPageComponent,
+    UserNotFoundComponent,
     
     
   ],

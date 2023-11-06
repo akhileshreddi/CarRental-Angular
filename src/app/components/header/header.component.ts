@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { Users } from 'src/app/models/user';
+import { AuthService } from 'src/app/shared/auth.service';
 import { DatabaseService } from 'src/app/shared/database.service';
 
 
@@ -13,7 +14,7 @@ import { DatabaseService } from 'src/app/shared/database.service';
 export class HeaderComponent implements OnInit{
 
 
-  constructor(private auth : AngularFireAuth, private databaseService : DatabaseService){
+  constructor(private auth : AngularFireAuth, private databaseService : DatabaseService, private as: AuthService){
 
   }
   logged_user : any
@@ -26,6 +27,10 @@ export class HeaderComponent implements OnInit{
       }
     })
    
+  }
+
+  Logout(){
+    this.as.logout()
   }
 
 }
