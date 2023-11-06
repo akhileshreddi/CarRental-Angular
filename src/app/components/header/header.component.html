@@ -1,0 +1,35 @@
+<div class="app-header-container">
+        <div class="desktop_header">
+        <div class="hamburger">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div id="logo">
+            <a href="" class="router"></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li class="host-link">
+                    <a target="_blank" href=""></a>
+                    <span>Become a Host</span>
+                </li>
+                <div class="account-login">
+                    <li *ngIf="logged_user && logged_user.name; else LoginSignUp">
+                        <i class='bx bx-user user-icon'></i>
+                        <span class="user-name" onclick="toggleDropdown()">{{logged_user.name}}
+                            <div class="dropdown-content">
+                                <a href="#">My Profile</a>
+                                <a [routerLink]="['/','Login']">Logout</a>
+                            </div>
+                        </span>
+                    </li>
+                    <ng-template #LoginSignUp>
+                        <li >
+                            <a href="/Login">Login/Signup</a>
+                        </li>
+                    </ng-template>
+                </div>
+            </ul>
+        </nav>
+        </div>
+</div>

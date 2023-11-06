@@ -1,0 +1,296 @@
+<app-header></app-header>
+<div class="booking_summary">
+    <div class="container_fluid">
+            <div class="summary_details">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="car_detail car_pic">
+                            <div class="top_header">
+                                <h1>{{car_name}}</h1>
+                            </div>
+                            <div class="midle_sec">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="img_crd image_car_flex">
+                                            <img class="image loaded" [src]="car_details.image">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="content_sec  desktop">
+                                            <h4>{{car_details.type}}</h4>
+                                            <div class="location">
+                                                <h3>Location : <span class="text-capitalize">{{location}}</span></h3>
+                                                <div class="date p-2">
+                                                    <div>
+                                                        <p>{{pickup_format}}</p>
+                                                        <p>8:00 AM</p>
+                                                    </div>
+                                                    <div class="center_sec">
+                                                        <p>To</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>{{return_format}}</p>
+                                                        <p>8:00 PM</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container-fluid text-center py-1">
+                                                <span class="time_duration">
+                                                    Duration: 
+                                                    {{no_of_days}} days
+                                                    3 Hours
+                                                </span>
+                                                <hr  class="my-1">
+                                            </div>
+                                            <div class="pkg_details">
+                                                <div >
+                                                    <p>Trips</p>
+                                                    <p>Reviews</p>
+                                                    <p>Extra Km charge</p>
+                                                </div>
+                                                <div>
+                                                    <p>{{car_details.no_of_rides}}</p>
+                                                    <p>{{car_details.no_of_reviews}}</p>
+                                                    <p>7KM/Hr</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="car_detail">
+                            <div class="desktop">
+                                <div class="top_header">
+                                    <h1>Car Details</h1>
+                                </div>
+                                <div class="car_features">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="/assets/images/auto-manual.svg">
+                                        <p> {{car_details.transmission_type}}</p>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="/assets/images/petrol.svg">
+                                        <p>{{car_details.fuel_type}}</p>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="/assets/images/Buggage.svg">
+                                        <p> 2 Baggage</p>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="/assets/images/seater.svg">
+                                        <p> {{car_details.seat_capacity}} Seater</p>
+                                    </div>
+                                </div>
+                                <div class="center_item">
+                                    <div>
+                                        <p>
+                                            <img src="/assets/images/insurance.svg">
+                                            Insurance
+                                        </p>
+                                        <p>
+                                            <img src="/assets/images/rs_assistance.svg">
+                                            Road Side Assistance
+                                        </p>
+                                    </div>
+                                    <div class="text-end">
+                                        <p>Included</p>
+                                        <p>Included</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btm_item"></div>
+                        </div>
+                        <div class="ratings">
+                             <div class="rating-header-container">
+                                <div class="rating-header">
+                                    <div class="title">Ratings & Reviews</div>
+                                </div>
+                                <div class="rating-subheader">
+                                    <img src="assets/icons/review.svg">
+                                    <span>4.93 (11 reviews)</span>
+                                 </div>
+                             </div>
+                             <div class="rating-list">
+                                <div class="rating-list-container">
+                                    <div class="rating-list-rating">
+                                        <div class="rating-list-rating-name">Value for Money</div>
+                                        <div class="rating-list-rating-value">
+                                            5
+                                            <div class="rating-list-rating-value-star-container">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating-list-rating">
+                                        <div class="rating-list-rating-name">Cleanliness</div>
+                                        <div class="rating-list-rating-value">
+                                            4
+                                            <div class="rating-list-rating-value-star-container">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img  style="height: 20px; width: 20px;"src="assets/images/star.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating-list-rating">
+                                        <div class="rating-list-rating-name">Drivability</div>
+                                        <div class="rating-list-rating-value">
+                                            5
+                                            <div class="rating-list-rating-value-star-container">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating-list-rating">
+                                        <div class="rating-list-rating-name">Host Responsiveness</div>
+                                        <div class="rating-list-rating-value">
+                                            4
+                                            <div class="rating-list-rating-value-star-container">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img  style="height: 20px; width: 20px;"src="assets/images/star.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="review-list-container">
+                                <div class="review-list-outer">
+                                    <div class="review-list">
+                                        <div class="review">
+                                            <div class="user-details">
+                                                <div class="user">
+                                                    <img src="/assets/images/user-image.png">
+                                                    <span>Sri Hari</span>
+                                                </div>
+                                            </div>
+                                            <div class="review-star">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                            </div>
+                                            <div class="review-text">
+                                                The car I rented was much nicer than what I Expected to be it was almost brand new and had all the comforts .
+                                            </div>
+                                        </div>
+                                        <div class="review">
+                                            <div class="user-details">
+                                                <div class="user">
+                                                    <img src="/assets/images/user-image.png">
+                                                    <span>Ravi</span>
+                                                </div>
+                                            </div>
+                                            <div class="review-star">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img  style="height: 20px; width: 20px;"src="assets/images/star.png">
+                                            </div>
+                                            <div class="review-text">
+                                                The car I rented was much nicer than what I Expected to be it was almost brand new and had all the comforts .
+                                            </div>
+                                        </div>
+                                        <div class="review">
+                                            <div class="user-details">
+                                                <div class="user">
+                                                    <img src="/assets/images/user-image.png">
+                                                    <span>Aravind</span>
+                                                </div>
+                                            </div>
+                                            <div class="review-star">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                                <img src="assets/icons/review.svg">
+                                            </div>
+                                            <div class="review-text">
+                                                The car I rented was much nicer than what I Expected to be it was almost brand new and had all the comforts .
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                             
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="lction">
+                            <div class="pymnt_sumry">
+                                <div class="top_header">
+                                    <h1>Booking Summary</h1>
+                                </div>
+                                <div class="pymnt_details">
+                                    <div>
+                                        <div class="d-flex align-items-center">
+                                            <p>Rental Charges</p>
+                                        </div>
+                                        <div #targetEle class="luggage_cost">
+                                            <p >Luggage</p>
+                                        </div>
+                                        <div #targetEle2 class="protect_cost">
+                                            <p >Trip Protection</p>
+                                        </div>
+                                        <p>GST</p>
+                                        <div class="d-flex align-items-center">
+                                            <p>Refundable Deposit</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <p>&#8377; {{rental_amount}}</p>
+                                        <div #targetele class="luggage_cost">
+                                            <p >&#8377;  999</p>
+                                        </div>
+                                        <div #targetele2 class="protect_cost">
+                                            <p >&#8377;  999</p>
+                                        </div>
+                                        <p>&#8377; {{gst_amount | number: '1.2-2'}}</p>
+                                        <p>&#8377; 3000</p>
+                                    </div>
+                                </div>
+                                <hr class="paymnt_brdr">
+                                <div class="lagguage">
+                                    <form>
+                                        <div class="form-check lagguage_bx">
+                                            <input #checkbox1 class="form-check-input" type="checkbox" id="flexCheckChecked" (change)="onLuggageCheckboxChange()" value>
+                                            <label class="form-check-label" for="flexCheckChecked">Luggage carrier</label>
+                                        </div>
+                                        <div class="trip_plan">
+                                            <div class="form-check lagguage_bx">
+                                                <input #checkbox2 class="form-check-input" type="checkbox" id="1042" (change)="onTripCheckboxChange()" value="1042">
+                                                <label class="form-check-label" for="trip_plan">Trip Protection Plan</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_input mt-4">
+                                            <input type="text" class="form-control" placeholder="Promo code" value>
+                                        </div>
+                                        <div class="totl_amunt">
+                                            <h1>Total Amount</h1>
+                                            <h1><span>&#8377; {{tot_amount}}</span></h1>
+                                        </div>
+                                        <button type="button" class="btn btn_proceed">Book Now</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

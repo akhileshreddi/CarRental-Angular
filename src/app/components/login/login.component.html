@@ -1,0 +1,167 @@
+
+	<div id="container" class="container">
+		<!-- FORM SECTION -->
+		
+		  <div class="row">
+			<!-- SIGN UP -->
+		 
+			<div class="col align-items-center flex-col sign-up">
+			  
+				<div class="form-wrapper align-items-center">
+				  <form (ngSubmit)="onSubmitRegister()" [formGroup]="signUpForm">
+					<div class="form sign-up">
+						<div class="input-group">
+							<i class='bx bxs-user'></i>
+							<input type="text" placeholder="Name" formControlName="name">
+						</div>
+						  <!-- <span class="valid-text" *ngIf=" !signUpForm.get('username').valid && signUpForm.get('username').touched">Invalid Username</span> -->
+						<div class="input-group">
+							<i class='bx bx-mail-send'></i>
+							<input type="email" placeholder="Email" formControlName="email">
+						</div>
+						<span class="valid-text" *ngIf=" !signUpForm.get('email').valid && signUpForm.get('email').touched">Enter correct email</span>
+						<div class="input-group">
+							<i class='bx bx-phone'></i>
+							<input type="text" placeholder="Phone Number" formControlName="phonenumber">
+						</div>
+						<span class="valid-text" *ngIf=" !signUpForm.get('phonenumber').valid && signUpForm.get('phonenumber').touched">Enter correct Phone Number</span>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input type="password" placeholder="Password"  formControlName="password">
+						</div>
+						<span class="valid-text" *ngIf=" !signUpForm.get('password').valid && signUpForm.get('password').touched">please enter atleast 8 characters with number,small,capital letter</span>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input type="password" placeholder="Confirm password"  formControlName="confirmpassword">
+						</div>
+						<span class="valid-text" *ngIf=" !signUpForm.get('confirmpassword').valid && signUpForm.get('confirmpassword').touched">Password Not Matched!</span>
+						<button >
+							Sign up
+						</button>
+						<p>
+							<span>
+								Already have an account?
+							</span>
+							<b  (click)="toggle()" class="pointer">
+								Login in here
+							</b>
+						</p>
+					</div>
+				  </form>
+				</div>
+				<div class="form-wrapper">
+					<div class="social-list align-items-center sign-up">
+						<div class="align-items-center facebook-bg">
+							<i class='bx bxl-facebook'></i>
+						</div>
+						<div class="align-items-center google-bg">
+							<i class='bx bxl-google'></i>
+						</div>
+						<div class="align-items-center twitter-bg">
+							<i class='bx bxl-twitter'></i>
+						</div>
+						<div class="align-items-center insta-bg">
+							<i class='bx bxl-instagram-alt'></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		
+			<!-- END SIGN UP -->
+			<!-- SIGN IN -->
+		
+			<div class="col align-items-center flex-col sign-in">
+				<div class="form-wrapper align-items-center">
+
+				  <form (ngSubmit)="onSubmitLogin()" [formGroup]="loginForm">
+					<div class="form sign-in">
+						<div class="input-group">
+							<i class='bx bxs-user'></i>
+							<input type="text" placeholder="Username" formControlName="LoginUsername">
+							<span class="valid-text"  *ngIf="  !loginForm.get('LoginUsername').valid && loginForm.get('LoginUsername').touched">username cannot be blank !</span>
+						</div>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input type="password" placeholder="Password"  formControlName="LoginPassword">
+							<span class="valid-text" *ngIf=" !loginForm.get('LoginPassword').valid && loginForm.get('LoginPassword').touched">password cannot be blank !</span>
+						</div>
+						<button  >
+							Login In
+						</button>
+						<p>
+							<span (click) ="onforgotPassword()" style="font-weight: 600;">
+								Forgot password?
+							</span>
+						</p>
+						<p>
+							<span>
+								Don't have an account?
+							</span>
+							<b (click)="toggle()" class="pointer">
+								Sign up here
+							</b>
+						</p>
+					</div>
+				 </form>
+			   </div>
+
+				<div class="form-wrapper">
+					<div class="social-list align-items-center sign-in">
+						<div class="align-items-center facebook-bg">
+							<i class='bx bxl-facebook'></i>
+						</div>
+						<div class="align-items-center google-bg">
+							<i class='bx bxl-google'></i>
+						</div>
+						<div class="align-items-center twitter-bg">
+							<i class='bx bxl-twitter'></i>
+						</div>
+						<div class="align-items-center insta-bg">
+							<i class='bx bxl-instagram-alt'></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<!-- END SIGN IN -->
+		</div>
+		
+		<!-- END FORM SECTION -->
+		<!-- CONTENT SECTION -->
+		<div class="row content-row">
+			<!-- SIGN IN CONTENT -->
+			<div class="col align-items-center flex-col">
+				<div class="text sign-in">
+					<h2>
+						Welcome back
+					</h2>
+					<p>
+						
+					</p>
+				</div>
+				<div class="img sign-in">
+					<img src="assets/ubc.png" alt="welcome">
+				</div>
+			</div>
+			<!-- END SIGN IN CONTENT -->
+			<!-- SIGN UP CONTENT -->
+			<div class="col align-items-center flex-col">
+				<div class="img sign-up">
+					<img src="assets/undraw_order_a_car.svg" alt="welcome">
+				</div>
+				<div class="text sign-up">
+					<h2>
+						Join with us
+					</h2>
+					<p>
+						
+					</p>
+				</div>
+			</div>
+			<!-- END SIGN UP CONTENT -->
+		</div>
+		<!-- END CONTENT SECTION -->
+	</div>
+
+	<!-- <script src="index.js"></script> -->

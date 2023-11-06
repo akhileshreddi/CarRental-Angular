@@ -1,0 +1,462 @@
+.booking_summary {
+    padding: 1rem 0;
+    padding-top:3.5rem;
+}
+.container-fluid {
+    max-width: 1300px;
+}
+.booking_summary .summary_details {
+    margin-top: 2rem;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+@media (min-width: 992px){
+.col-lg-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+}
+}
+
+.booking_summary .car_detail {
+    background: #fff;
+    box-shadow: 0 4px 4px rgba(0,0,0,.08);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+.booking_summary .car_detail .top_header {
+    background: #2c295f;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 1.5rem;
+}
+.booking_summary .car_detail .top_header h1 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    margin: 0;
+}
+.booking_summary .car_detail .midle_sec {
+    padding: 1rem;
+}
+@media (min-width: 768px){
+.col-md-6 {
+    flex: 0 0 auto;
+    width: 47%;
+    padding-left: 20px;
+}
+}
+
+.booking_summary .car_detail .img_crd.image_car_flex {
+    background: #ebebeb;
+    border-radius: 10px;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+.booking_summary .car_detail .img_crd img {
+    width: 100%;
+}
+.content_sec {
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.summary_details .content_sec h4 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    color: #3c3883;
+    margin: 0;
+}
+.booking_summary .car_detail .location {
+    background-color: #f2f2f7;
+    padding: 0.5rem 2rem;
+    margin-top: 13px;
+}
+.text-center {
+    text-align: center!important;
+}
+
+.py-1 {
+    padding-top: 0.25rem!important;
+    padding-bottom: 0.25rem!important;
+}
+.booking_summary .car_detail .pkg_details {
+    margin-top: 13px;
+}
+
+.booking_summary .car_detail .date, .booking_summary .car_detail .pkg_details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.booking_summary .car_detail .location h3 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    color: #2c295f;
+    text-align: center;
+}
+.text-capitalize {
+    text-transform: capitalize!important;
+}
+.booking_summary .car_detail .location .date p, .grid_view .location .date p, .list_sec .location .date p {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 23px;
+    text-align: center;
+    color: #2c295f;
+    margin: 0;
+}
+.booking_summary .car_detail .center_sec {
+    background: #3c3883;
+    border-radius: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+.booking_summary .car_detail .center_sec p {
+    color: white!important;
+}
+.my-1 {
+    margin-top: 0.25rem!important;
+    margin-bottom: 0.25rem!important;
+}
+
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    height: 2px;
+    background-color: currentColor;
+    border: 0;
+    opacity: .25;
+}
+.summary_details .content_sec p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #8c84a4;
+    margin: 0;
+}
+
+.car_detail .desktop .top_header h1{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    margin: 0;
+}
+.booking_summary .car_features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .car_features .d-flex.align-items-center, .car_features .d-flex.align-items-center.mb-3, .car_features .d-flex.align-items-center.mb-md-3 {
+        width: 100%;
+    }
+}
+
+.align-items-center {
+    align-items: center!important;
+}
+
+.d-flex {
+    display: flex!important;
+}
+.booking_summary .car_features p {
+    font-size: 12px;
+    line-height: 18px;
+}
+.car_features img {
+    width: 30px;
+    height: 18px;
+}
+.car_features p {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 28px;
+    color: #2c295f;
+    margin: 0;
+}
+.booking_summary .car_detail .center_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: #f2f2f7;
+}
+.booking_summary .car_detail .center_item img {
+    width: 15px;
+    margin-right: 12px;
+}
+@media (min-width: 992px){
+.col-lg-4 {
+    flex: 0 0 auto;
+    width: 30%;
+    padding: 12px;
+    padding-top: 0;
+    
+}
+}
+.lction .pymnt_sumry {
+    background: #fff;
+    box-shadow: 0 4px 4px rgba(0,0,0,.08);
+    border-radius: 8px;
+}
+.lction .pymnt_sumry .top_header {
+    background: #2c295f;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px;
+}
+.lction .pymnt_sumry .top_header h1 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    margin: 0;
+}
+.lction .pymnt_sumry .pymnt_details {
+    padding: 1rem 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lction .pymnt_sumry .pymnt_details p {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 35px;
+    color: #2c295f;
+    margin-bottom: 0;
+}
+
+.luggage_cost{
+    display: none;
+}
+.protect_cost{
+    display: none;
+}
+
+
+
+
+.paymnt_brdr{
+    margin: 1rem;
+}
+.lction .pymnt_sumry .lagguage {
+    padding: 0 20px 2rem;
+}
+.lction .pymnt_sumry .lagguage .form-check {
+    margin-bottom: 6px;
+}
+
+.form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: 0.125rem;
+}
+.form-check-input {
+    width: 1em;
+    height: 1em;
+    margin-top: 0.25em;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    border: 1px solid rgba(0,0,0,.25);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+}
+.lction .form-check-input {
+    border: 1px solid #8c84a4;
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 0.25em;
+}
+.form-check .form-check-input {
+    float: left;
+    margin-left: -1.5em;
+}
+.lction .pymnt_sumry .lagguage .lagguage_bx label {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #2c295f;
+}
+.lction .form-check-input:checked {
+    background-color: #3c3883;
+    border: 1px solid #3c3883;
+}
+.form-check-input:checked[type=checkbox] {
+    background: black;
+}
+input [type=checkbox]{
+    background: black;
+}
+.lction .pymnt_sumry .lagguage .form_input {
+    position: relative;
+}
+
+.mt-4 {
+    margin-top: 1.5rem!important;
+}
+.lction .pymnt_sumry .lagguage .form_input input {
+    background: #fff;
+    border: 1.15254px solid #3c3883;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #2c295f;
+    padding: 10px 30px;
+}
+.lction .pymnt_sumry .lagguage .totl_amunt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+.lction .pymnt_sumry .lagguage .totl_amunt h1 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #2c295f;
+    margin: 0;
+}
+.lction .pymnt_sumry .lagguage .btn_proceed {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: .016em;
+    background: #3c3883;
+    border-radius: 45px;
+    color: #fff;
+    padding: 8px 30px;
+    display: block;
+    margin: auto;
+    width: -moz-max-content;
+    width: max-content;
+    transition: all .5s ease;
+}
+
+.ratings .rating-header-container {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.ratings .rating-header-container .rating-header {
+    background: #2c295f;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 1.5rem;
+}
+.ratings .rating-header-container .rating-subheader {
+    /* margin-left: -3px; */
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 10px 1.5rem;
+    /* font-family: "IBM Plex Sans";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: #1f1f1f; */
+}
+
+.ratings .rating-header-container .rating-header .title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    margin: 0;
+}
+.ratings .rating-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+@media screen and (min-width: 600px){
+.ratings .rating-list-container {
+    width: 350px;
+}
+}
+.ratings .rating-list-rating {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.ratings .rating-list-rating-value {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.rating-list-rating .rating-list-rating-name{
+    /* font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    margin: 0; */
+    padding-left: 25px;
+    font-size: 15px;
+}
+.ratings .review-list-container {
+    direction: ltr;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.ratings .review-list {
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 3px;
+    position: relative;
+}
+.ratings .review-list .review {
+    cursor: pointer;
+    min-width: 306px;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.2), 0 3px 1px -2px rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.14);
+    padding: 15px;
+}
+.ratings .review-list .review .user-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.ratings .review-list .review .user-details .user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.ratings .review-list .review .user-details .user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

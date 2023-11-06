@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "car-rental-1bb11": {
+      "hosting": {
+        "CarRental": [
+          "car-rental-1bb11"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "car-rental-1bb11"
+  }
+}

@@ -1,0 +1,133 @@
+/* body{
+
+    background-image: url('/assets/.jpg');
+} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@font-face {
+    font-family:"My-font";
+    src: url('/assets/OFL.txt');
+}
+
+.hero{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    left: 1rem;
+}
+
+.car-back-img{
+    position: absolute;
+    top: -100px;;
+    right:0; 
+    z-index: -1;  
+}
+
+.place-container {
+    /* max-width: 600px; */
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    position: absolute;
+    top:10px;
+    left:60px
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+input[type="date"] {
+    font-family: "My-font", sans-serif; /* Use the custom font */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+}
+
+#location {
+    font-family: "My-font", sans-serif; /* Use the custom font */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+select, input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+
+button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #1d6ee1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.content{
+    margin-left: 3rem;
+    font-family: Poppins;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+.content h1, .slider-heading {
+    font-size: 25px;
+}
+}
+
+ .content h1, .slider-heading {
+    font-family: My-font;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 130%;
+    letter-spacing: .016em;
+    color: #3c3883;
+    position: absolute;
+    top:15rem;
+    left:5rem;
+
+}
+.slider-heading h2{
+    font-size: 40px;
+}

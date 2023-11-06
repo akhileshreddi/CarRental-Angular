@@ -1,0 +1,66 @@
+
+        <div class="app-container">
+            <!-- <h2>Best Selling Models</h2> -->
+            <div class="car-list-home-container">
+                <div class="car-list-home">
+                    <h2>Trending Cars</h2>
+                    <div #carList class="car-list">
+                        <div #carListCards class="car-list-card" *ngFor="let car of Cars">
+                            <div class="car-list-image" style="height: 160px;">
+                                <img src={{car.image}}>
+                            </div>
+                            <div class="car-list-description">
+                                <div class="desc-reviews">
+                                    <div class="desc-reviews-icon">
+                                        <img src="assets/icons/review.svg">
+                                    </div>
+                                    <div class="desc-reviews-value">{{car.reviews}}</div>
+                                </div>
+                                <div class="desc-title">{{car.make}} {{car.model}}</div>
+                                <div class="desc-properties">
+                                    <div class="desc-properties-property">
+                                        {{car.transmission_type}}
+                                        <div class="property-point"></div>
+                                    </div>
+                                    <div class="desc-properties-property">
+                                        {{car.fuel_type}}
+                                        <div class="property-point"></div>
+                                    </div>
+                                    <div class="desc-properties-property">
+                                        {{car.seat_capacity}} Seats
+                                        <div class="property-point"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="car-list-price-dist">
+                                <div class=car-list-price>
+                                    <div class="car-list-price-availability">{{car.avaliable_date}}</div>
+                                    <div class="car-list-price-title">${{car.price}}/hr</div>
+                                    <div class="car-list-price-subtitle"></div>
+                                </div>
+
+                                <div class="car-list-distance">
+                                    <img src="assets/icons/location.svg" alt="location">
+                                    <div class="car-list-distance-place">{{car.place}}</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                       
+                    </div>
+                </div>
+                <div class="car-list-home-slides">
+                    <div class="car-list-home-slides-left car-list-home-slides-left-disable left" (click)="moveSlide('left')">
+                         <img src="assets/icons/arrow_left.png">
+                    </div>
+                    <div class="car-list-home-slides-right right" (click)="moveSlide('right')">
+                         <img src="assets/icons/arrow_right.png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      
+
