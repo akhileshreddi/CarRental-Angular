@@ -207,7 +207,7 @@
               <div class="row">
                 <div class="col-lg-4 col-md-3 col-12">
                   <div class="car_type">
-                    <img class="image loaded" [src]="car.image" height="100%" loading="lazy">
+                    <img appHoverEffect class="image loaded" [src]="car.image" height="100%" loading="lazy">
                   </div>
                 </div>
                 <div class="col-lg-8 col-md-9 col-12">
@@ -273,7 +273,7 @@
                     </p>
                    
                     <div class="right_sec">
-                      <div class="btn car_book" (click)="booknow(car.id)">
+                      <div   class="btn car_book" (click)="booknow(car.id)">
                         Book Now
                       </div>
                     </div>

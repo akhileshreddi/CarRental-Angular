@@ -31,6 +31,8 @@ import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatIconModule} from '@angular/material/icon';
 import { BookingPageComponent } from './components/booking-page/booking-page.component';
 import { UserNotFoundComponent } from './components/user-not-found/user-not-found.component';
+import { HoverEffectDirective } from './directives/hover-effect.directive';
+
 
 
 
@@ -48,6 +50,8 @@ import { UserNotFoundComponent } from './components/user-not-found/user-not-foun
     CarsPageComponent,
     BookingPageComponent,
     UserNotFoundComponent,
+    HoverEffectDirective,
+    
     
     
   ],

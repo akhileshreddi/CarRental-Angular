@@ -390,6 +390,9 @@ label{
 .car_list .car_type img {
     width: 100%;
 }
+.car_list .car_type:hover {
+    transform: scale(1.5);
+}
 .vehicle_details .content h4 {
     font-weight: 500;
     font-size: 14px;
