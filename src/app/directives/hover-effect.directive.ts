@@ -5,7 +5,7 @@ import { Directive, ElementRef, HostBinding, HostListener } from '@angular/core'
 })
 export class HoverEffectDirective {
 
-  constructor(private eleref : ElementRef) { }
+  constructor() { }
 
   
   @HostBinding('style.transform') transform:string;

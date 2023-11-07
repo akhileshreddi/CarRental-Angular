@@ -10,7 +10,11 @@ describe('AuthService', () => {
     service = TestBed.inject(AuthService);
   });
 
-  it('should be created', () => {
+  it(' service should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should be register'), () => {
+    expect(service.register).toBe("Register succesfull")
+  }
 });
