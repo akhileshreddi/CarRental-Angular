@@ -42,9 +42,8 @@ export class BookingPageComponent implements OnInit{
   constructor(private route: ActivatedRoute, private dbservice : DatabaseService) {}
 
   ngOnInit() {
-
     this.route.params.subscribe(params => {
-      this.carId = +params['id']; // Use + to convert it to a number
+      this.carId = +params['id']; 
     });
 
     // Capture and parse the carDetails from the query parameters
@@ -59,7 +58,7 @@ export class BookingPageComponent implements OnInit{
 
       this.dbservice.getCarById(this.carId).subscribe(data => {
       this.car_details = data
-      console.log("car-details",this.car_details)
+     
    
       this.pickup_format = this.formatDate(this.pickupdate)
       this.return_format = this.formatDate(this.returndate)

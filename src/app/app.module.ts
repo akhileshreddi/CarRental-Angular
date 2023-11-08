@@ -59,7 +59,6 @@ import { HoverEffectDirective } from './directives/hover-effect.directive';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideDatabase(() =>getDatabase()),

@@ -23,10 +23,10 @@ export class AuthService {
 
 
   //register Mehtod
-  register(name:string, phone:number, email:string, password:string){
+  register(name:string, phone:number, email:string, password:string):void{
     if (!name || !phone || !email || !password) {
       alert('Please provide all required information.');
-      return;
+      
     }
     
     this.fireauth.createUserWithEmailAndPassword(email,password).then((userCredential)=>{
@@ -39,6 +39,7 @@ export class AuthService {
       alert(err.message)
       this.router.navigate(['/Login'])
     })
+   
   }
 
 
