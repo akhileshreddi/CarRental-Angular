@@ -36,7 +36,7 @@
                             <div class="car-list-price-dist">
                                 <div class=car-list-price>
                                     <div class="car-list-price-availability">{{car.avaliable_date}}</div>
-                                    <div class="car-list-price-title">${{car.price}}/hr</div>
+                                    <div class="car-list-price-title">{{car.price | currency:'INR':'symbol-narrow':'2.1-2'}}/hr</div>
                                     <div class="car-list-price-subtitle"></div>
                                 </div>
 
