@@ -8,14 +8,21 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from '../header/header.component';
+import { of } from 'rxjs';
 
 describe('BookingPageComponent', () => {
   let component: BookingPageComponent;
   let fixture: ComponentFixture<BookingPageComponent>;
 
+  const fakeActivatedRoute = {
+    snapshot: { data: { } }
+  } as ActivatedRoute;
+
+  
+
   beforeEach(() => {
 
-
+   
     TestBed.configureTestingModule({
       imports:[AppRoutingModule,
         AngularFireModule.initializeApp(environment.firebase),
@@ -23,8 +30,8 @@ describe('BookingPageComponent', () => {
       declarations: [BookingPageComponent, HeaderComponent],
       providers: [
         // Provide the mock ActivatedRoute
-        {provide: ActivatedRoute },
-        {provide: DatabaseService}
+        {provide: ActivatedRoute ,useValue: fakeActivatedRoute},
+        {provide: DatabaseService, useValue:""}
         
       ]
     });

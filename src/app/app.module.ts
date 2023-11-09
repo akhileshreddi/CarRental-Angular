@@ -32,6 +32,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { BookingPageComponent } from './components/booking-page/booking-page.component';
 import { UserNotFoundComponent } from './components/user-not-found/user-not-found.component';
 import { HoverEffectDirective } from './directives/hover-effect.directive';
+import { DateFormatPipe } from './pipes/date-format.pipe';
+
 
 
 
@@ -51,6 +53,7 @@ import { HoverEffectDirective } from './directives/hover-effect.directive';
     BookingPageComponent,
     UserNotFoundComponent,
     HoverEffectDirective,
+    DateFormatPipe
     
     
     
