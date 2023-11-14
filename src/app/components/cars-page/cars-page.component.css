@@ -76,7 +76,7 @@
     padding-top: 1rem;
 }
 .col-lg-9 {
-    margin-left: 25%; /* Same as the width of the fixed column */
+    margin-left: 24%; /* Same as the width of the fixed column */
     padding: 1rem;
 }
 
@@ -297,7 +297,7 @@ label{
 @media  (min-width: 992px){
     .col-lg-3 {
         flex: 0 0 auto;
-        width: 25%
+        width: 23%;
     }
 
     .col-lg-4 {
