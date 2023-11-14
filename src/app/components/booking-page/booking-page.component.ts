@@ -16,7 +16,6 @@ export class BookingPageComponent implements OnInit{
   returndate:string;
   pickupdate:string;
   location:string;
-
  
   no_of_days:number;
   car_name:string;
