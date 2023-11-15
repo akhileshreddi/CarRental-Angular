@@ -56,7 +56,7 @@ export class AuthService {
    //forgot password  still pending at html side
   forgotpassword(email:string){
     this.fireauth.sendPasswordResetEmail(email).then( () => {
-      this.router.navigate([''])
+      this.router.navigate(['/Login'])
     }, err => {
        alert("some thing went wrong")
     })

@@ -29,15 +29,32 @@ export class CarsPageComponent implements OnInit {
   constructor(private route : ActivatedRoute, private dbService : DatabaseService, private router : Router){}
   ngOnInit(): void {
     
+    const initialParams = this.route.snapshot.paramMap;
 
-     this.route.paramMap.subscribe((params) => {
-      this.location = params.get('location');
-      this.pickupDate = params.get('pickupdate');
-  })
+   if (initialParams) {
+    this.location = initialParams.get('location');
+    this.pickupDate = initialParams.get('pickupdate');
+  }
 
-  this.CarsDataSubscription = this.dbService.getCarsData().subscribe((data) => {
-    this.Cars = data
-    this.availabelCars = this.findAvailableCars()
+  this.CarsDataSubscription = this.dbService.getCarsData().subscribe( {
+    next: (data) => {
+      try {
+        if (data) {
+          this.Cars = data;
+          this.availabelCars = this.findAvailableCars();
+        } else {
+          console.error('Data received is undefined or null.');
+        }
+      } catch (error) {
+        console.error('Error processing data:', error);
+      }
+    },
+    error: (err) => {
+      console.error('Error fetching data:', err);
+    },
+    complete: () => {
+      console.log('Subscription completed.');
+    }
   });
   
 }
@@ -45,84 +62,109 @@ export class CarsPageComponent implements OnInit {
 
 selectedLabels:string[] = []
 ontypechange(event:any){
-    
+  
   const checkbox = event.target;
-  const label = checkbox.nextElementSibling.textContent;
-  console.log(label)
-  if (checkbox.checked) {
-    this.selectedLabels.push(label); // Add the selected label to the array
-  } else {
-    const index = this.selectedLabels.indexOf(label);
-    if (index !== -1) {
-      this.selectedLabels.splice(index, 1); // Remove the label if it's unchecked
+  const labelElement = checkbox.nextElementSibling;
+
+  if (labelElement) {
+    const label = labelElement.textContent;
+    if (checkbox.checked) {
+      this.selectedLabels.push(label);
+    } else {
+      const index = this.selectedLabels.indexOf(label);
+      if (index !== -1) {
+        this.selectedLabels.splice(index, 1);
+      }
     }
+    console.log("labels",this.selectedLabels)
+    this.availabelCars = this.filterCarsonType(this.selectedLabels);
   }
-  this.availabelCars = this.filterCarsonType(this.selectedLabels);
 }
+
 
 onbrandchange(event:any){
     
   const checkbox = event.target;
-  const label = checkbox.nextElementSibling.textContent;
-  // console.log(label)
-  if (checkbox.checked) {
-    this.selectedLabels.push(label); // Add the selected label to the array
-  } else {
-    const index = this.selectedLabels.indexOf(label);
-    if (index !== -1) {
-      this.selectedLabels.splice(index, 1); // Remove the label if it's unchecked
+  const labelElement = checkbox.nextElementSibling;
+
+  if (labelElement) {
+    const label = labelElement.textContent;
+    if (checkbox.checked) {
+      this.selectedLabels.push(label);
+    } else {
+      const index = this.selectedLabels.indexOf(label);
+      if (index !== -1) {
+        this.selectedLabels.splice(index, 1);
+      }
     }
+    console.log("labels",this.selectedLabels)
+    this.availabelCars = this.filterCarsonBrand(this.selectedLabels);
   }
-  this.availabelCars = this.filterCarsonBrand(this.selectedLabels);
+  
 }
 
 ontranschange(event:any){
     
   const checkbox = event.target;
-  const label = checkbox.nextElementSibling.textContent;
-  // console.log(label)
-  if (checkbox.checked) {
-    this.selectedLabels.push(label); // Add the selected label to the array
-  } else {
-    const index = this.selectedLabels.indexOf(label);
-    if (index !== -1) {
-      this.selectedLabels.splice(index, 1); // Remove the label if it's unchecked
+  const labelElement = checkbox.nextElementSibling;
+
+  if (labelElement) {
+    const label = labelElement.textContent;
+    if (checkbox.checked) {
+      this.selectedLabels.push(label);
+    } else {
+      const index = this.selectedLabels.indexOf(label);
+      if (index !== -1) {
+        this.selectedLabels.splice(index, 1);
+      }
     }
+    console.log("labels",this.selectedLabels)
+    this.availabelCars = this.filterCarsonTrans(this.selectedLabels);
   }
-  this.availabelCars = this.filterCarsonTrans(this.selectedLabels);
+
 }
 
 
 onfuelchange(event:any){
     
   const checkbox = event.target;
-  const label = checkbox.nextElementSibling.textContent;
-  // console.log(label)
-  if (checkbox.checked) {
-    this.selectedLabels.push(label); // Add the selected label to the array
-  } else {
-    const index = this.selectedLabels.indexOf(label);
-    if (index !== -1) {
-      this.selectedLabels.splice(index, 1); // Remove the label if it's unchecked
+  const labelElement = checkbox.nextElementSibling;
+
+  if (labelElement) {
+    const label = labelElement.textContent;
+    if (checkbox.checked) {
+      this.selectedLabels.push(label);
+    } else {
+      const index = this.selectedLabels.indexOf(label);
+      if (index !== -1) {
+        this.selectedLabels.splice(index, 1);
+      }
     }
+    console.log("labels",this.selectedLabels)
+    this.availabelCars = this.filterCarsonFuel(this.selectedLabels);
   }
-  this.availabelCars = this.filterCarsonFuel(this.selectedLabels);
+ 
 }
 
 onseatchange(event:any){
     
   const checkbox = event.target;
-  const label = checkbox.nextElementSibling.textContent;
-  // console.log(label)
-  if (checkbox.checked) {
-    this.selectedLabels.push(label); // Add the selected label to the array
-  } else {
-    const index = this.selectedLabels.indexOf(label);
-    if (index !== -1) {
-      this.selectedLabels.splice(index, 1); // Remove the label if it's unchecked
+  const labelElement = checkbox.nextElementSibling;
+
+  if (labelElement) {
+    const label = labelElement.textContent;
+    if (checkbox.checked) {
+      this.selectedLabels.push(label);
+    } else {
+      const index = this.selectedLabels.indexOf(label);
+      if (index !== -1) {
+        this.selectedLabels.splice(index, 1);
+      }
     }
+    console.log("labels",this.selectedLabels)
+    this.availabelCars = this.filterCarsonSeat(this.selectedLabels);
   }
-  this.availabelCars = this.filterCarsonSeat(this.selectedLabels);
+ 
 }
 
 
@@ -130,7 +172,7 @@ onseatchange(event:any){
     const date = new Date(this.pickupDate)
     const availabelCars = this.Cars.filter((car) => {
       const availdate = new Date(car.avaliable_date);
-      return  this.location === car.place;
+      return  this.location === car.place ;
     })
     return availabelCars
   }
@@ -185,9 +227,7 @@ filterCarsonSeat(selectedLabels: string[]): Car[] {
 }
 
 sortByReviews(event: any){
-    console.log(event)
    const selectedvalue = event.target.value;
-   console.log(selectedvalue)
    if(selectedvalue === 'LTH'){
     this.availabelCars.sort((a,b) => a.reviews - b.reviews)
    }else if(selectedvalue === 'HTL'){

@@ -94,23 +94,9 @@ onSubmitLogin(){
 
 //add forgotpassword componenent and route it (INCOMPLETE)
 onforgotPassword(){
-   
+    this.authservice.forgotpassword("akhilesh.9234@gmail.com");
 }
 
-
-
-// checkUsernameValidation(control:FormControl):{ [s: string]: boolean}{
-//   const pattern = /^[a-z][a-z0-9]*$/;
-//   const value = control.value;
-//   if(value===null){
-//     return null
-//   }
-//   if(!value.match(pattern)){
-//     return {invalidUsername:true}
-//   }
-//   return null
-
-// }
 
 
 
@@ -131,6 +117,8 @@ checkPasswordValidation = (control:FormControl):{[s:string]:boolean} =>{
   return null
 }
 
+
+
 ConfirmpasswordValidation=(control : FormControl):{[s:string]:boolean}=>{
   const confimpass = control.value
   if(this.check_password != confimpass){
@@ -149,12 +137,6 @@ phoneNumberValidation=(control : FormControl):{[s:string]:boolean}=>{
   return null 
 
 }
-
-
-
-
-
-
 
 
 
