@@ -22,7 +22,6 @@ export class DatabaseService {
             phone: phone,
             uid : uid
           };
-          // Push the user data to the Firebase Realtime Database under a new child with a unique key
           const url = `${this.api_URL}users/${uid}.json`;
 
             this.http.put(url, userData)

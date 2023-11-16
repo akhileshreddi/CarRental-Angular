@@ -38,15 +38,9 @@ export class CarsPageComponent implements OnInit {
 
   this.CarsDataSubscription = this.dbService.getCarsData().subscribe( {
     next: (data) => {
-      try {
-        if (data) {
-          this.Cars = data;
-          this.availabelCars = this.findAvailableCars();
-        } else {
-          console.error('Data received is undefined or null.');
-        }
-      } catch (error) {
-        console.error('Error processing data:', error);
+      if (data) {
+        this.Cars = data;
+        this.availabelCars = this.findAvailableCars();
       }
     },
     error: (err) => {
@@ -118,7 +112,7 @@ ontranschange(event:any){
         this.selectedLabels.splice(index, 1);
       }
     }
-    console.log("labels",this.selectedLabels)
+    
     this.availabelCars = this.filterCarsonTrans(this.selectedLabels);
   }
 
@@ -140,7 +134,7 @@ onfuelchange(event:any){
         this.selectedLabels.splice(index, 1);
       }
     }
-    console.log("labels",this.selectedLabels)
+    
     this.availabelCars = this.filterCarsonFuel(this.selectedLabels);
   }
  
@@ -161,7 +155,7 @@ onseatchange(event:any){
         this.selectedLabels.splice(index, 1);
       }
     }
-    console.log("labels",this.selectedLabels)
+   
     this.availabelCars = this.filterCarsonSeat(this.selectedLabels);
   }
  
@@ -268,5 +262,7 @@ ngOnDestroy(){
     this.CarsDataSubscription.unsubscribe()
   }
 }
+
+
 
 }
