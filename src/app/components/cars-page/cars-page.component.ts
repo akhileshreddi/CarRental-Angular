@@ -94,7 +94,6 @@ onbrandchange(event:any){
     console.log("labels",this.selectedLabels)
     this.availabelCars = this.filterCarsonBrand(this.selectedLabels);
   }
-  
 }
 
 ontranschange(event:any){
